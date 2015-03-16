@@ -40,8 +40,17 @@ class Cassandra2 extends \FeideConnect\Data\Repository {
 
 		echo("connecting to nodes"); print_r($config['nodes']);
 
+
+		$CC = [
+			[ 
+		        'host'      => '127.0.0.1',
+		        'port'      => 9042,
+		        'socket'    => [SO_RCVTIMEO => ["sec" => 10, "usec" => 0], //socket transport only
+	        ]
+		];
+
 		// $this->db = new \evseevnn\Cassandra\Database($config['nodes'], $config['keyspace']);
-		$this->db = new \Cassandra\Connection($config['nodes'], $config['keyspace']);
+		$this->db = new \Cassandra\Connection($CC, $config['keyspace']);
 
 		echo "Constructor done\n";
 		$this->db->connect();

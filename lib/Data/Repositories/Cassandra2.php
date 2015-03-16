@@ -38,9 +38,14 @@ class Cassandra2 extends \FeideConnect\Data\Repository {
 		if (empty($config['keyspace'])) throw new FeideConnectException('Required config not set');
 		if (empty($config['nodes'])) throw new FeideConnectException('Required config not set');
 
+		echo("connecting to nodes"); print_r($config['nodes']);
+
 		// $this->db = new \evseevnn\Cassandra\Database($config['nodes'], $config['keyspace']);
 		$this->db = new \Cassandra\Connection($config['nodes'], $config['keyspace']);
+
+		echo "Constructor done\n";
 		$this->db->connect();
+		echo "Connected done\n";
 
 		// Set consistency level for farther requests (default is CONSISTENCY_ONE)
 		// $connection->setConsistency(Request::CONSISTENCY_QUORUM);

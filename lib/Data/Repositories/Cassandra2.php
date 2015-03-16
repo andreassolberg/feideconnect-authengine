@@ -42,11 +42,11 @@ class Cassandra2 extends \FeideConnect\Data\Repository {
 
 
 		$CC = [ 
-			'host'   => '127.0.0.1',
-	        'port'   => 9042,
-	        'socket' => [
-	        	SO_RCVTIMEO => ["sec" => 10, "usec" => 0] //socket transport only
-	        ]
+			'host'   		 => '127.0.0.1',
+	        'port'   		 => 9042,
+		    'class'     	 => 'Cassandra\Connection\Stream',//use stream instead of socket, default socket. Stream may not work in some environment
+	        'connectTimeout' => 4, // connection timeout, default 5,  stream transport only
+	        'timeout'   	 => 8 // write/recv timeout, default 30, stream transport only
 		];
 
 		// $this->db = new \evseevnn\Cassandra\Database($config['nodes'], $config['keyspace']);

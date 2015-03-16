@@ -3,7 +3,7 @@
 	"storage": {
 		"type": "cassandra",
 		"keyspace": "feideconnect",
-		"nodes": [127.0.0.1]
+		"nodes": ["127.0.0.1"]
 	},
 	"logging": {
 		"file": false

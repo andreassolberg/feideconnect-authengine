@@ -3,9 +3,21 @@
 
 namespace FeideConnect;
 
-
+use FeideConnect\Data\StorageProvider;
 
 require(dirname(dirname(__FILE__)) . '/lib/_autoload.php');
+
+echo "Autoloader completed\n";
+
+$storage = StorageProvider::getStorage();
+
+echo "Storage loader\n";
+
+$users = $storage->getUserByUserIDsec('feide:andreas@uninett.no');
+
+
+
+
 
 $command = new \Commando\Command();
 $cli = new CLI();

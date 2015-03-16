@@ -33,6 +33,7 @@ before_script:
 script:
 #- phpunit --debug -v --coverage-clover build/logs/clover.xml --bootstrap lib/_autoload.php tests
 # - phpunit --debug -v --bootstrap lib/_autoload.php tests/OAuth.php
+- bin/feideconnect.php users
 - phantomjs tests-phantomjs/main.js
 # Run PHPinfo
 # - curl http://127.0.0.1/phpinfo

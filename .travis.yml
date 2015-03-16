@@ -14,4 +14,7 @@ before_script:
 - cqlsh 127.0.0.1 -f etc/bootstrap.sql
 - cqlsh 127.0.0.1 -f etc/ci/testdata.sql
 script:
+- bin/cassa2.php
 - bin/cassa1.php
+
+

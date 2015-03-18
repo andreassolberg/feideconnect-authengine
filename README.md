@@ -2,7 +2,9 @@
 
 [![Build Status](https://travis-ci.org/feideconnect/feideconnect-authengine.svg?branch=master)](https://travis-ci.org/andreassolberg/feideconnect-authengine)
 [![Code Climate](https://codeclimate.com/github/feideconnect/feideconnect-authengine/badges/gpa.svg)](https://codeclimate.com/github/feideconnect/feideconnect-authengine)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/feideconnect/feideconnect-authengine/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/feideconnect/feideconnect-authengine/?branch=master)
 [![Test Coverage](https://codeclimate.com/github/feideconnect/feideconnect-authengine/badges/coverage.svg)](https://codeclimate.com/github/feideconnect/feideconnect-authengine)
+
 
 ## Preparations
 
